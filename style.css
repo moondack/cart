@@ -24,6 +24,11 @@
       align-items:center;
       gap:15px;
     }
+   .left button{
+   border: none;
+  background: none;
+  padding: 0px;
+   }
 
     .imgrig{
       margin-top: -5px;
@@ -503,4 +508,5 @@
     tbody tr {
         padding: 10px;
     }
+
 }

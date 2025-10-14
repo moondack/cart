@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина — Магазин Z</title>
+
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@500&family=Inknut+Antiqua:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+
+  <header>
+    <div class="left">
+      
+      <span>☰ М Е Н Ю</span>
+      
+    </div>
+    <div class="burger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    
+ 
+    <div class="right">
+    
+      <span><img src="" alt="">К О Р З И Н А</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="breadcrumbs">Главная страница</div>
+    <h1 class="cart-title">КОРЗИНА</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ПРОДУКТ</th>
+          <th>ЦВЕТ</th>
+          <th>РАЗМЕР</th>
+          <th>КОЛ-ВО</th>
+          <th>ИТОГО</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="product">
+              <img src="img/1971155052_2_4_1.png" alt="">
+              <div>
+                <div class="product-name">ЖИЛЕТ С КОНТРАСТНОЙ ОТДЕЛКОЙ</div>
+                <div class="color">NAVY BLUE</div>
+              </div>
+            </div>
+          </td>
+          <td>NAVY BLUE</td>
+          <td>
+            <select>
+              <option>S</option>
+              <option selected>M</option>
+              <option>L</option>
+              <option>XL</option>
+            </select>
+          </td>
+          <td><input type="number" value="1"></td>
+          <td class="total">1999 ₽</td>
+          <td class="remove">×</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="product">
+              <img src="img/1971155052_2_4_1 (1).png" alt="">
+              <div>
+                <div class="product-name">СТРУЯЩИЕСЯ БРЮКИ С ПРИНТОМ</div>
+                <div class="color">PURPLE</div>
+              </div>
+            </div>
+          </td>
+          <td>PURPLE</td>
+          <td>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option selected>L</option>
+              <option>XL</option>
+            </select>
+          </td>
+          <td><input type="number" value="1"></td>
+          <td class="total">1599 ₽</td>
+          <td class="remove">×</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="product">
+              <img src="img/1971155052_2_4_1 (2).png" alt="">
+              <div>
+                <div class="product-name">БОТИЛЬОНЫ НА ЛЕГКОЙ ПОДОШВЕ</div>
+                <div class="color">BLACK</div>
+              </div>
+            </div>
+          </td>
+          <td>BLACK</td>
+          <td>
+            <select>
+              <option>36</option>
+              <option>37</option>
+              <option selected>38</option>
+              <option>39</option>
+              <option>40</option>
+              <option>41</option>
+              <option>42</option>
+            </select>
+          </td>
+          <td><input type="number" value="1"></td>
+          <td class="total">1599 ₽</td>
+          <td class="remove">×</td>
+        </tr>
+
+        <tr>
+          <td>
+            <div class="product">
+              <img src="img/1971155052_2_4_1 (3).png" alt="">
+              <div>
+                <div class="product-name">БЕЛАЯ РУБАШКА С ПЕРЛАМИ</div>
+                <div class="color">WHITE</div>
+              </div>
+            </div>
+          </td>
+          <td>WHITE</td>
+          <td>
+            <select>
+              <option>XS</option>
+              <option selected>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+          </td>
+          <td><input type="number" value="1"></td>
+          <td class="total">1599 ₽</td>
+          <td class="remove">×</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+      ОБЩАЯ СУММА: <span>5790 ₽</span>
+    </div>
+
+    <button class="order-btn">Заказать сейчас →</button>
+  </main>
+
+  <footer>
+    <div class="logo">Z</div>
+    
+    <div class="socials">
+      <span><a href="https://ru.pinterest.com/">PINTEREST</a></span>
+      <span><a href="https://vk.com/">VK</a></span>
+      <span><a href="https://t.me/walletsocial">TELEGRAM</a></span>
+    </div>
+    <div class="policy">
+      ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ <br> <br> УСЛОВИЯ ИСПОЛЬЗОВАНИЯ
+    </div>
+  </footer>
+
+
+
+
+
+<div class="mobile-menu">
+    <nav class="mobile-nav">
+        <a href="#">Главная</a>
+        <a href="#">Каталог</a>
+        <a href="#">Отзывы</a>
+
+    </nav>
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerMenu = document.querySelector('.burger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    burgerMenu.addEventListener('click', function() {
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+    
+
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            burgerMenu.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+
+    if (window.innerWidth <= 768) {
+        const labels = ['Продукт', 'Цвет', 'Размер', 'Количество', 'Итого', 'Удалить'];
+        const tds = document.querySelectorAll('tbody td');
+        
+        tds.forEach((td, index) => {
+            const labelIndex = index % 6;
+            td.setAttribute('data-label', labels[labelIndex]);
+        });
+    }
+});
+</script>
+</body>
+</html>

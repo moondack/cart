@@ -206,7 +206,7 @@
     color: white;
     text-decoration: none;
 } 
-/* Адаптивность для всех устройств */
+
 @media screen and (max-width: 1200px) {
     main {
         max-width: 95%;
@@ -250,7 +250,7 @@
         z-index: 1000;
     }
     
-    /* Бургер-меню */
+ 
     .burger-menu {
         display: block;
         cursor: pointer;
@@ -266,7 +266,7 @@
         transition: 0.3s;
     }
     
-    /* Активное состояние бургер-меню */
+
     .burger-menu.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -513,4 +513,5 @@
     }
 
 }
+
 

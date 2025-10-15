@@ -1,5 +1,4 @@
-
-    * {margin:0; padding:0; box-sizing:border-box;}
+* {margin:0; padding:0; box-sizing:border-box;}
 
     body {
       background:#fff;
@@ -29,8 +28,8 @@
     }
    .left button{
    border: none;
-  background: none;
-  padding: 0px;
+    background: none;
+    padding: 0px;
    }
 
     .imgrig{
@@ -179,7 +178,7 @@
       line-height:1.8;
       max-width:800px;
       margin:0 auto 40px;
-      color:rgba(255,255,255,0.9);
+      color:#ffffffb3;
     }
 
     footer .socials {
@@ -195,7 +194,7 @@
 
     footer .policy {
       font-size:14px;
-      color:rgba(255,255,255,0.7);
+      color:#ffffffb3;
       letter-spacing:1px;
     }
 .socials a{
@@ -209,7 +208,7 @@
 
 @media screen and (max-width: 1200px) {
     main {
-        max-width: 95%;
+        max-width: 1140px;
         padding: 40px 15px 80px;
     }
     
@@ -247,14 +246,13 @@
     header {
         padding: 20px;
         position: relative;
-        z-index: 1000;
-    }
-    
  
+    }
+
     .burger-menu {
         display: block;
         cursor: pointer;
-        z-index: 1001;
+
     }
     
     .burger-menu span {
@@ -265,27 +263,15 @@
         margin: 5px 0;
         transition: 0.3s;
     }
-    
 
-    .burger-menu.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .burger-menu.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .burger-menu.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-    
+
 
     .mobile-menu {
         position: fixed;
         top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
+        right: 1200px;
+        width: 1200px;
+        height: 800px;
         background: #fff;
         z-index: 999;
         transition: 0.3s;
@@ -314,7 +300,6 @@
     header .left span:not(.burger-menu) {
         display: none;
     }
-    
 
     table {
         display: block;
@@ -360,7 +345,8 @@
     }
 
     tbody td:before {
-        content: attr(data-label);
+
+    
         font-weight: bold;
         text-transform: uppercase;
         font-size: 12px;
@@ -370,7 +356,7 @@
     }
     
     select, input[type="number"] {
-        width: 100%;
+        width: 120px;
         max-width: 120px;
         margin: 0 auto;
         display: block;
@@ -386,7 +372,7 @@
     }
     
     .order-btn {
-        width: 100%;
+        width: 1200px;
         max-width: 300px;
         margin: 30px auto 0;
     }
@@ -468,20 +454,6 @@
     }
 }
 
-* {
-    transition: all 0.3s ease;
-}
-
-
-@media screen and (max-width: 768px) {
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    body {
-        -webkit-overflow-scrolling: touch;
-    }
-}
 
 
 @media screen and (min-width: 769px) {
@@ -493,7 +465,6 @@
         display: none;
     }
 }
-
 
 @media screen and (max-width: 320px) {
     body {
@@ -511,7 +482,4 @@
     tbody tr {
         padding: 10px;
     }
-
 }
-
-
